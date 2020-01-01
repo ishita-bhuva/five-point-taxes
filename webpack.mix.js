@@ -18,7 +18,10 @@ mix.combine(
         "src/vendor/dataTables/datatables.min.js",
         "src/vendor/jqueryui/jquery-ui.min.js",
         "src/vendor/sweetalert/sweetalert.min.js",
-        "src/vendor/validate/jquery.validate.min.js"
+        "src/vendor/validate/jquery.validate.min.js",
+        "src/vendor/swiper/swiper.js",
+        "src/vendor/aos/aos.js",
+        "src/js/common.js",
     ],
     "dist/js/vendor.js"
 );
@@ -29,6 +32,8 @@ mix.combine(
         "src/vendor/dataTables/datatables.min.css",
         "src/vendor/font-awesome/css/font-awesome.min.css",
         "src/vendor/jqueryui/jquery-ui.min.css",
+        "src/vendor/swiper/swiper.css",
+        "src/vendor/aos/aos.css"
         //"src/vendor/sweetalert/sweetalert.css"
     ],
     "dist/css/vendor.css"
@@ -59,25 +64,25 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/about-us.ejs",
-            filename: "about-us.html",
+            template: "ejs-compiled-loader!./src/service.ejs",
+            filename: "service.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/contact-us.ejs",
-            filename: "contact-us.html",
+            template: "ejs-compiled-loader!./src/contact.ejs",
+            filename: "contact.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/datatable-demo.ejs",
-            filename: "datatable-demo.html",
+            template: "ejs-compiled-loader!./src/document.ejs",
+            filename: "document.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/font-awesome.ejs",
-            filename: "font-awesome.html",
+            template: "ejs-compiled-loader!./src/about.ejs",
+            filename: "about.html",
             inject: false
-        })
+        }),
     ],
     devServer: {
         //hot: true, inline: true, contentBase: __dirname
@@ -85,6 +90,6 @@ mix.webpackConfig({
         watchContentBase: true,
         host: "0.0.0.0",
         open: true
-        //port: 8082,
+            //port: 8082,
     }
 });

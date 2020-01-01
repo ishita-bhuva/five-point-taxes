@@ -1,30 +1,263 @@
 // Fonts
 // @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
-
 // @import "cover";
-
 @import "header";
+@import "footer";
 @import "index";
-@import "font-awesome";
-@import "about";
-@import "datatable";
-@import "contact-us";
-
-main {
-    .container {
-        min-height: 500px;
-    }
+@import "service";
+html {
+    height: 100%;
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: $f-lato;
+    font-weight: 400;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: normal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $white;
+    position: relative;
+    color: $gray;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    list-style-type: none;
+}
+
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+    -webkit-appearance: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+button,
+input[type="submit"] {
+    cursor: pointer;
+    text-decoration: none !important;
+    @include fp-transition;
+    display: inline-block;
+    color: $primary-color;
+    &:hover,
+    &.active,
+    &:focus,
+    &:active {
+        text-decoration: none !important;
+        color: $primary-color;
+        outline: none;
+        opacity: 0.8;
+        box-shadow: none !important;
+    }
+}
+
+input,
+select {
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fp-title {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: $f-black;
+    position: relative;
+    &:before {
+        @include fp-before-after;
+        bottom: auto;
+        width: 100px;
+        height: 2px;
+        background-color: $primary-color;
+        top: -10px;
+    }
+    span {
+        color: $primary-color;
+    }
+}
+
+.fp-text {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: $f-medium;
+    margin-top: 20px;
+}
+
+.fp-subtitle {
+    color: rgba(79, 79, 79, 0.5);
+    font-size: 16px;
+    font-weight: $f-black;
+    @include fp-transition;
+    line-height: 28px;
+}
+
+.fp-btn-bg {
+    background-color: $primary-color;
+    min-width: 180px;
+    padding: 10px 25px;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: $f-medium;
+    border: 1px solid $primary-color;
+    color: $white;
+    border-radius: 50px;
+    margin-top: 70px;
+    @include fp-transition;
+    &:hover,
+    &.active,
+    &:focus,
+    &:active {
+        color: $primary-color;
+        background-color: transparent;
+    }
+}
+
+.fp-btn-border {
+    background-color: transparent;
+    border-color: $white;
+    &:hover,
+    &.active,
+    &:focus,
+    &:active {
+        color: $white;
+    }
+}
+
+.fp-space {
+    margin: 110px 0;
+}
+
+.fp-auth {
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-control {
+        border-color: #C9C9C9;
+        border-radius: 50px;
+        height: auto;
+        font-size: 14px;
+        color: $primary-color;
+        font-family: $f-medium;
+        padding: 11px 25px;
+        line-height: normal;
+        &::-webkit-input-placeholder {
+            color: #C9C9C9;
+        }
+        &:-ms-input-placeholder {
+            color: #C9C9C9;
+        }
+        &::placeholder {
+            color: #C9C9C9;
+        }
+    }
+    textarea.form-control {
+        height: 135px;
+        border-radius: 5px;
+    }
+}
+
+.fp-contact-main {
+    .fp-contact-list {
+        margin-top: 30px;
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            i {
+                background-color: $primary-color;
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                margin-right: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            &.fp-text {
+                font-size: 14px;
+                a {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+.fp-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    main {
+        flex-grow: 1;
+    }
+}
+
+.fp-title-main {
+    .fp-banner-img {
+        height: 400px;
+        img {
+            object-position: top center;
+        }
+    }
+    .fp-banner-data {
+        height: calc(100% - 80px);
+        top: auto;
+    }
+}
+
+.fp-quote-top,
+.fp-quote-bottom {
+    background: url(../images/quote-blue.svg) no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 25px;
+    height: 21px;
+    margin-right: 5px;
+    position: relative;
+    top: -7px;
+}
+
+.fp-quote-top {
+    transform: rotate(-180deg);
 }

@@ -17,33 +17,184 @@
         @include media-breakpoint-up(xl) {
             font-size: 18px;
         }
-
-        // span {
-        //     background-color: $primary;
-        // }
     }
 }
 
-
-.hd-title{
-    width: 100%;
-    h3{
+.fp-banner-main {
+    position: relative;
+    .fp-banner-img {
+        overflow: hidden;
         width: 100%;
-        font-size: 35px;
-        padding: 25px 0px;
+        height: 100vh;
+        position: relative;
+        &:before {
+            @include fp-before-after;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        img {
+            @include fp-img-set;
+        }
+    }
+    .fp-banner-data {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .fp-banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: $white;
+            text-align: center;
+            .fp-title {
+                font-size: 50px;
+                line-height: 60px;
+                &::before {
+                    display: none;
+                }
+            }
+            .fp-btn-border {
+                margin-left: 40px;
+            }
+        }
     }
 }
 
-.animated-box{
-    width: 100%;
-    padding: 50px  30px;
-    margin: 0px 0px 40px 0px;
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
+.fp-home-service-main {
+    .fp-home-service-data {
+        margin-top: 50px;
+        .fp-home-service {
+            position: relative;
+            @include fp-transition;
+            cursor: pointer;
+            &:hover {
+                .fp-home-service-img {
+                    &:before {
+                        background-color: rgba(2, 161, 207, 0.8);
+                    }
+                    img {
+                        filter: blur(2px);
+                    }
+                }
+                .fp-home-service-data {
+                    opacity: 0;
+                }
+                .fp-home-service-data-hover {
+                    opacity: 1;
+                }
+            }
+            .fp-home-service-img {
+                overflow: hidden;
+                width: 100%;
+                height: 300px;
+                position: relative;
+                &:before {
+                    @include fp-before-after;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    @include fp-transition;
+                    z-index: 1;
+                }
+                img {
+                    @include fp-img-set;
+                    @include fp-transition;
+                }
+            }
+            .fp-home-service-data,
+            .fp-home-service-data-hover {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+                z-index: 2;
+                @include fp-transition;
+                flex-direction: column;
+                text-align: center;
+                h3 {
+                    font-weight: $f-bold;
+                    font-size: 20px;
+                    color: $white;
+                    position: relative;
+                    &:before {
+                        @include fp-before-after;
+                        width: 60px;
+                        height: 2px;
+                        top: auto;
+                        bottom: -10px;
+                        background-color: $white;
+                        margin: 0 auto;
+                    }
+                }
+                p {
+                    color: $white;
+                    font-size: 14px;
+                    margin-top: 15px;
+                    a {
+                        font-weight: $f-black;
+                        color: $white;
+                    }
+                }
+            }
+            .fp-home-service-data-hover {
+                opacity: 0;
+                justify-content: flex-start;
+            }
+        }
+    }
 }
 
-.sweetalert{
-    width: 100%;
-    text-align: center;
+.fp-know-main {
+    position: relative;
+    .fp-know-img {
+        overflow: hidden;
+        width: 100%;
+        height: 400px;
+        position: relative;
+        &:before {
+            @include fp-before-after;
+            background-color: rgba(2, 161, 207, 0.5);
+        }
+        img {
+            @include fp-img-set;
+        }
+    }
+    .fp-know-data {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .fp-know-content {
+            color: $white;
+            text-align: center;
+            padding: 50px 0;
+            .fp-title {
+                &::before {
+                    right: 0;
+                    margin: 0 auto;
+                    background-color: $white;
+                }
+            }
+            .fp-btn-bg {
+                margin-top: 40px;
+            }
+        }
+    }
 }

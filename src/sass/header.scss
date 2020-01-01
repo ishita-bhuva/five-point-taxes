@@ -1,5 +1,73 @@
-header {
-    .lms-header-logo {
-        margin-right: auto;
+.fp-header {
+    padding: 13px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .navbar-brand {
+        width: 55px;
+    }
+    .navbar-nav {
+        li {
+            margin: 0 18px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.active {
+                a {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+            a {
+                padding: 0 !important;
+                font-size: 14px;
+                color: $white;
+                font-weight: $f-bold;
+                position: relative;
+                &:before {
+                    @include fp-before-after;
+                    background-color: $white;
+                    height: 2px;
+                    width: 30px;
+                    top: auto;
+                    bottom: -10px;
+                    @include fp-transition;
+                    opacity: 0;
+                }
+            }
+            &.dropdown {
+                &:hover {
+                    .dropdown-menu.show {
+                        // display: block;
+                    }
+                }
+                .dropdown-menu.show {
+                    // display: none;
+                    padding: 10px;
+                    margin: 0;
+                    a {
+                        color: $gray;
+                        margin: 10px;
+                    }
+                }
+            }
+            .dropdown-toggle {
+                &:after {
+                    border: none;
+                    background: url(../images/arrow.svg) no-repeat;
+                    width: 7px;
+                    height: 13px;
+                    background-size: contain;
+                    background-position: center center;
+                    margin: 0;
+                    vertical-align: middle;
+                    transform: rotate(90deg);
+                    margin-left: 15px;
+                }
+            }
+        }
     }
 }

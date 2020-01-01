@@ -1,0 +1,231 @@
+.fp-service-main {
+    .fp-service-list {
+        margin-top: 50px;
+        .col-md-4 {
+            margin-bottom: 30px;
+        }
+        .fp-service-data {
+            border: 1px solid #E2E2E2;
+            padding: 30px;
+            text-align: center;
+            min-height: 144px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            cursor: pointer;
+            @include fp-transition;
+            background-color: $white;
+            &:hover {
+                border-color: transparent;
+                box-shadow: 0 0 10px 0 rgba(2, 161, 207, 0.22);
+                h3 {
+                    color: $primary-color;
+                }
+            }
+            img {
+                height: 40px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.fp-contact-main {
+    position: relative;
+    .fp-contact-img {
+        height: 730px;
+        overflow: hidden;
+        width: 100%;
+        img {
+            @include fp-img-set;
+        }
+    }
+    .fp-contact-data {
+        background-color: $white;
+        box-shadow: 0 0 10px 0 rgba(2, 161, 207, 0.22);
+        padding: 50px;
+        max-width: 1210px;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.fp-document-main {
+    .fp-document-list {
+        margin-bottom: 90px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .fp-download {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                max-width: 25%;
+                flex-basis: 25%;
+                margin-bottom: 40px;
+                a {
+                    display: flex;
+                    align-items: flex-start;
+                    max-width: 235px;
+                    span {
+                        width: calc(100% - 60px);
+                    }
+                }
+            }
+            i {
+                width: 30px;
+                height: 30px;
+                background: url(../images/download.svg) no-repeat;
+                background-size: contain;
+                background-position: center center;
+                margin-right: 30px;
+            }
+        }
+        .fp-logo-list {
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                max-width: 20%;
+                flex-basis: 20%;
+                text-align: center;
+                a {
+                    &:hover {
+                        img {
+                            filter: grayscale(0);
+                        }
+                    }
+                    img {
+                        height: 80px;
+                        filter: grayscale(1);
+                        @include fp-transition;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fp-about-main {
+    .fp-about-list {
+        .fp-text {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .fp-about-client {
+            margin-top: 50px;
+            .fp-text {
+                position: relative;
+            }
+            h4 {
+                font-size: 20px;
+                font-weight: $f-black;
+                color: $primary-color;
+                margin-top: 20px;
+            }
+        }
+    }
+    .fp-about-team {
+        position: relative;
+        .fp-about-img {
+            overflow: hidden;
+            width: 100%;
+            height: 440px;
+            position: relative;
+            &:before {
+                @include fp-before-after;
+                background-color: rgba(2, 161, 207, 0.8);
+                z-index: 1;
+            }
+            img {
+                @include fp-img-set;
+                filter: blur(15px);
+            }
+        }
+        .fp-about-team-data {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            .container {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                height: 100%;
+                .row {
+                    width: 100%;
+                }
+            }
+            .fp-about-content {
+                color: $white;
+                padding: 50px 0;
+                .fp-title {
+                    &:before {
+                        background-color: $white;
+                    }
+                }
+                .fp-team-slider {
+                    margin-top: 40px;
+                    .fp-team-slider-data {
+                        display: flex;
+                        align-items: flex-start;
+                    }
+                    .swiper-pagination {
+                        position: relative;
+                        bottom: auto;
+                        left: auto;
+                        width: auto;
+                        text-align: right;
+                        margin-top: 50px;
+                        span {
+                            background-color: $white;
+                            width: 12px;
+                            height: 12px;
+                            margin: 0 7px;
+                        }
+                    }
+                    .fp-team-img {
+                        width: 120px;
+                        height: 120px;
+                        overflow: hidden;
+                        position: relative;
+                        border-radius: 50%;
+                        margin-right: 35px;
+                        &:before {
+                            @include fp-before-after;
+                            background-color: rgba(2, 161, 207, 0.2);
+                        }
+                        img {
+                            @include fp-img-set;
+                        }
+                    }
+                    .fp-team-data {
+                        width: calc(100% - 155px);
+                        h4 {
+                            font-size: 20px;
+                            font-weight: $f-bold;
+                        }
+                        .fp-text {
+                            .fp-quote-bottom {
+                                background-image: url(../images/quote-white.svg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
