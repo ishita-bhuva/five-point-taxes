@@ -142,6 +142,9 @@ i {
     font-weight: $f-black;
     @include fp-transition;
     line-height: 28px;
+    @include media-breakpoint-down(lg){
+        line-height: 23px;
+    }
     @include media-breakpoint-down(sm){
         font-size: 14px;
     }
@@ -198,6 +201,9 @@ i {
     margin: 110px 0;
     @include media-breakpoint-down(lg){
         margin: 76px 0;
+    }
+    @include media-breakpoint-down(sm){
+        margin: 55px 0;
     }
 }
 
@@ -295,6 +301,9 @@ i {
         height: 400px;
         @include media-breakpoint-down(lg){
             height: 300px;
+        }
+        @include media-breakpoint-down(md){
+            height: 200px;
         }
         img {
             object-position: top center;
