@@ -17,6 +17,9 @@
             cursor: pointer;
             @include fp-transition;
             background-color: $white;
+            @include media-breakpoint-down(lg){
+                padding: 17px;
+            }
             &:hover {
                 border-color: transparent;
                 box-shadow: 0 0 10px 0 rgba(2, 161, 207, 0.22);
@@ -38,6 +41,9 @@
         height: 730px;
         overflow: hidden;
         width: 100%;
+        @include media-breakpoint-down(sm){
+            height: 1050px;
+        }
         img {
             @include fp-img-set;
         }
@@ -53,12 +59,19 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        @include media-breakpoint-down(lg){
+            max-width: 90%;
+            padding: 30px 20px;
+        }
     }
 }
 
 .fp-document-main {
     .fp-document-list {
         margin-bottom: 90px;
+        @include media-breakpoint-down(sm){
+            margin-bottom: 40px;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -70,6 +83,10 @@
                 max-width: 25%;
                 flex-basis: 25%;
                 margin-bottom: 40px;
+                @include media-breakpoint-down(lg){
+                    max-width: 50%;
+                    flex-basis: 50%;
+                }
                 a {
                     display: flex;
                     align-items: flex-start;
@@ -86,6 +103,15 @@
                 background-size: contain;
                 background-position: center center;
                 margin-right: 30px;
+                @include media-breakpoint-down(md){
+                    width: 27px;
+                    height: 27px;
+                    margin-right: 19px;
+                }
+                @include media-breakpoint-down(sm){
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
         .fp-logo-list {
@@ -94,10 +120,16 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            @include media-breakpoint-down(sm){
+                margin-top: 31px;
+            }
             li {
                 max-width: 20%;
                 flex-basis: 20%;
                 text-align: center;
+                @include media-breakpoint-down(sm){
+                    max-width: 18%;
+                }
                 a {
                     &:hover {
                         img {
@@ -108,6 +140,15 @@
                         height: 80px;
                         filter: grayscale(1);
                         @include fp-transition;
+                        @include media-breakpoint-down(lg){
+                            height: 65px;
+                        }
+                        @include media-breakpoint-down(md){
+                            height: 51px;
+                        }
+                        @include media-breakpoint-down(sm){
+                            height: 31px;
+                        }
                     }
                 }
             }
@@ -179,9 +220,15 @@
                 }
                 .fp-team-slider {
                     margin-top: 40px;
+                    @include media-breakpoint-down(sm){
+                        margin-top: 15px;
+                    }
                     .fp-team-slider-data {
                         display: flex;
                         align-items: flex-start;
+                        @include media-breakpoint-down(sm){
+                            display: inline-block;
+                        }
                     }
                     .swiper-pagination {
                         position: relative;
@@ -204,6 +251,10 @@
                         position: relative;
                         border-radius: 50%;
                         margin-right: 35px;
+                        @include media-breakpoint-down(sm){
+                            width: 100px;
+                            height: 100px;
+                        }
                         &:before {
                             @include fp-before-after;
                             background-color: rgba(2, 161, 207, 0.2);
@@ -214,11 +265,21 @@
                     }
                     .fp-team-data {
                         width: calc(100% - 155px);
+                        @include media-breakpoint-down(sm){
+                            width: unset;
+                            padding-top: 14px;
+                        }
                         h4 {
                             font-size: 20px;
                             font-weight: $f-bold;
                         }
                         .fp-text {
+                            @include media-breakpoint-down(sm){
+                                display: -webkit-box;
+                                -webkit-line-clamp: 5;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                            }
                             .fp-quote-bottom {
                                 background-image: url(../images/quote-white.svg);
                             }
