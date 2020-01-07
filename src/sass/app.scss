@@ -71,7 +71,7 @@ input[type="submit"] {
     &.active,
     &:focus,
     &:active {
-        text-decoration: none !important;
+        text-decoration: none;
         color: $primary-color;
         outline: none;
         opacity: 0.8;
@@ -97,10 +97,10 @@ i {
     line-height: 40px;
     font-weight: $f-black;
     position: relative;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         font-size: 26px;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         font-size: 23px;
         line-height: 32px;
     }
@@ -111,11 +111,11 @@ i {
         height: 2px;
         background-color: $primary-color;
         top: -10px;
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(lg) {
             top: -5px;
             width: 83px;
         }
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
             width: 52px;
         }
     }
@@ -129,7 +129,7 @@ i {
     line-height: 28px;
     font-family: $f-medium;
     margin-top: 20px;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         font-size: 14px;
         line-height: 22px;
         margin-top: 9px;
@@ -142,10 +142,10 @@ i {
     font-weight: $f-black;
     @include fp-transition;
     line-height: 28px;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         line-height: 23px;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         font-size: 14px;
     }
 }
@@ -161,18 +161,18 @@ i {
     color: $white;
     border-radius: 50px;
     margin-top: 70px;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         min-width: 152px;
         padding: 10px 16px;
         font-size: 14px;
         line-height: 18px;
         margin-top: 47px;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         min-width: 132px;
         margin-top: 40px;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         min-width: 115px;
         margin-top: 29px;
     }
@@ -199,10 +199,10 @@ i {
 
 .fp-space {
     margin: 110px 0;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         margin: 76px 0;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         margin: 55px 0;
     }
 }
@@ -255,11 +255,11 @@ i {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include media-breakpoint-down(lg){
+                @include media-breakpoint-down(lg) {
                     width: 45px;
                     height: 45px;
                 }
-                @include media-breakpoint-down(md){
+                @include media-breakpoint-down(md) {
                     width: 41px;
                     height: 41px;
                     margin-right: 14px;
@@ -267,11 +267,11 @@ i {
                 svg {
                     width: 25px;
                     height: 25px;
-                    @include media-breakpoint-down(lg){
+                    @include media-breakpoint-down(lg) {
                         width: 22px;
                         height: 22px;
                     }
-                    @include media-breakpoint-down(md){
+                    @include media-breakpoint-down(md) {
                         width: 20px;
                         height: 20px;
                     }
@@ -299,10 +299,10 @@ i {
 .fp-title-main {
     .fp-banner-img {
         height: 400px;
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(lg) {
             height: 300px;
         }
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
             height: 200px;
         }
         img {
@@ -325,7 +325,7 @@ i {
     margin-right: 5px;
     position: relative;
     top: -7px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         width: 22px;
         height: 19px;
     }
