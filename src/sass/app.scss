@@ -308,6 +308,9 @@ i {
         @include media-breakpoint-down(md) {
             height: 200px;
         }
+        img {
+            object-position: top center;
+        }
     }
     .fp-banner-data {
         height: calc(100% - 65px);
