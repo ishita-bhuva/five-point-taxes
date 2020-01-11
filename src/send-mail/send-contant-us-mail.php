@@ -45,7 +45,7 @@ $body = str_replace('%from%', $siteName, $body);
 
 // authentication
 
-$firstRecipientUsername = "pooja@logisticinfotech.co.in";
+$firstRecipientUsername = "nirav@logisticinfotech.com";
 // $secondRecipientUsername = "jeff.horvath@digipli.com";
 // $thirdRecipientUsername = "jeffrey.ruiz@digipli.com";
 $authUsername = "alex.corey1212@gmail.com";
