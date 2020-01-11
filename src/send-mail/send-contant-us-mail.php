@@ -59,14 +59,15 @@ $senderName = 'jeremy';
 $mailsubject = $siteName;
 
 try {
-  // $mail->SMTPDebug = 0;
-  $mail->isSMTP();
-  $mail->Host = $host;
+  $mail->SMTPDebug = 2;
+  // $mail->isSMTP();
+  // $mail->Host = $host;
+  $mail->Host = "smtp.gmail.com";
   $mail->SMTPAuth   = true;
   $mail->Username   = $authUsername;
   $mail->Password   = $authPassword;
-  // $mail->Port = 587;
-  $mail->SMTPSecure = "tls";
+  $mail->SMTPSecure = "ssl";
+  $mail->Port = "465";
 
   $mail->setFrom($authUsername, $senderName);
 
