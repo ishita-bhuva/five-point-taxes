@@ -48,8 +48,8 @@ $body = str_replace('%from%', $siteName, $body);
 $firstRecipientUsername = "nirav@logisticinfotech.com";
 // $secondRecipientUsername = "jeff.horvath@digipli.com";
 // $thirdRecipientUsername = "jeffrey.ruiz@digipli.com";
-$authUsername = "alex.corey1212@gmail.com";
-$authPassword = "Bh@vin9488";
+$authUsername = "dev.jeremy.ahc@gmail.com";
+$authPassword = "jeremy5000";
 $senderName = 'jeremy';
 
 
