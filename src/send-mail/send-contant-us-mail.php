@@ -40,8 +40,8 @@ $body = str_replace('%from%', $siteName, $body);
 
 
 // host
-$host = 'tls://smtp.gmail.com:587';
-$port = 587;
+// $host = 'tls://smtp.gmail.com:587';
+// $port = 587;
 
 // authentication
 
@@ -61,11 +61,12 @@ $mailsubject = $siteName;
 try {
   // $mail->SMTPDebug = 0;
   $mail->isSMTP();
-  $mail->Host       = $host;
+  $mail->Host = 'smtp.gmail.com';
   $mail->SMTPAuth   = true;
   $mail->Username   = $authUsername;
   $mail->Password   = $authPassword;
-  $mail->SMTPSecure = "tls";
+  $mail->Port = 587;
+  // $mail->SMTPSecure = "tls";
 
   $mail->setFrom($authUsername, $senderName);
 
