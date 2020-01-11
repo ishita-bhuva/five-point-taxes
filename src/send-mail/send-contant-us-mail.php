@@ -48,8 +48,8 @@ $port = 587;
 $firstRecipientUsername = "pooja@logisticinfotech.co.in";
 // $secondRecipientUsername = "jeff.horvath@digipli.com";
 // $thirdRecipientUsername = "jeffrey.ruiz@digipli.com";
-$authUsername = "task.logistic.test@gmail.com";
-$authPassword = "task.logistic.test";
+$authUsername = "dev.jeremy.ahc@gmail.com";
+$authPassword = "jeremy5000";
 // $senderName = $fname.' '.$lname;
 
 
