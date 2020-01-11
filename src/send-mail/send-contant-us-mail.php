@@ -50,7 +50,7 @@ $firstRecipientUsername = "pooja@logisticinfotech.co.in";
 // $thirdRecipientUsername = "jeffrey.ruiz@digipli.com";
 $authUsername = "task.logistic.test@gmail.com";
 $authPassword = "task.logistic.test";
-$senderName = $fname.' '.$lname;
+// $senderName = $fname.' '.$lname;
 
 
 // recipient
@@ -67,7 +67,7 @@ try {
   $mail->Password   = $authPassword;
   $mail->SMTPSecure = "tls";
 
-  $mail->setFrom($authUsername, $senderName);
+  $mail->setFrom($authUsername);
 
   $mail->addAddress($firstRecipientUsername);
   // $mail->addAddress($secondRecipientUsername);
@@ -88,10 +88,11 @@ try {
   echo json_encode($response);
   exit;
 } catch (Exception $e) {
-  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   $response = [
-    'message' => 'Email could not be sent.',
+    'message' => 'Email could not be sent.{$mail->ErrorInfo}',
     'status' => "error",
+    'error' => $e
   ];
   header('Content-Type: application/json');
   echo json_encode($response);
