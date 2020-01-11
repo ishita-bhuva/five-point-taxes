@@ -5,7 +5,7 @@ require("PHPMailer/src/PHPMailer.php");
 require("PHPMailer/src/SMTP.php");
 require("PHPMailer/src/Exception.php");
 
-$mail = new PHPMailer\PHPMailer\PHPMailer(true);
+$mail = new PHPMailer(true);
 
 $titlename = trim($_POST["titlename"]);
 $fname = trim($_POST["fname"]);
