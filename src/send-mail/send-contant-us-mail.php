@@ -50,7 +50,7 @@ $firstRecipientUsername = "pooja@logisticinfotech.co.in";
 // $thirdRecipientUsername = "jeffrey.ruiz@digipli.com";
 $authUsername = "dev.jeremy.ahc@gmail.com";
 $authPassword = "jeremy5000";
-// $senderName = $fname.' '.$lname;
+$senderName = 'jeremy';
 
 
 // recipient
@@ -67,7 +67,7 @@ try {
   $mail->Password   = $authPassword;
   $mail->SMTPSecure = "tls";
 
-  $mail->setFrom($authUsername);
+  $mail->setFrom($authUsername, $senderName);
 
   $mail->addAddress($firstRecipientUsername);
   // $mail->addAddress($secondRecipientUsername);
