@@ -21,7 +21,10 @@ mix.combine(
         "src/vendor/validate/jquery.validate.min.js",
         "src/vendor/swiper/swiper.js",
         "src/vendor/aos/aos.js",
+        "src/vendor/toastr/toastr.min.js",
+        "src/send-mail/send-mail.js",
         "src/js/common.js",
+       
     ],
     "dist/js/vendor.js"
 );
@@ -33,7 +36,8 @@ mix.combine(
         "src/vendor/font-awesome/css/font-awesome.min.css",
         "src/vendor/jqueryui/jquery-ui.min.css",
         "src/vendor/swiper/swiper.css",
-        "src/vendor/aos/aos.css"
+        "src/vendor/aos/aos.css",
+        "src/vendor/toastr/toastr.min.css"
         //"src/vendor/sweetalert/sweetalert.css"
     ],
     "dist/css/vendor.css"
@@ -45,6 +49,7 @@ mix.sass("src/sass/app.scss", "dist/css");
 
 mix.copyDirectory("src/vendor/font-awesome/fonts", "dist/fonts");
 mix.copyDirectory("src/fonts/", "dist/fonts");
+mix.copyDirectory("src/send-mail/", "dist/send-mail");
 
 // mix.sourceMaps();
 mix.setPublicPath("dist");

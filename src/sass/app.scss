@@ -381,3 +381,12 @@ i {
         }
     }
 }
+.toast{
+    box-shadow: none !important;
+}
+.toast-success {
+    background-color: #51A351;
+}
+.toast-error {
+    background-color: #BD362F;
+}
