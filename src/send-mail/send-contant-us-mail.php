@@ -45,9 +45,8 @@ $host = 'tls://smtp.gmail.com:587';
 
 // authentication
 
-$firstRecipientUsername = "nirav@logisticinfotech.com";
-// $secondRecipientUsername = "jeff.horvath@digipli.com";
-// $thirdRecipientUsername = "jeffrey.ruiz@digipli.com";
+$firstRecipientUsername = "kma@kamodigital.com";
+$secondRecipientUsername = "jmwerden@gmail.com";
 $authUsername = "dev.jeremy.ahc@gmail.com";
 $authPassword = "jeremy5000";
 $senderName = 'jeremy';
@@ -71,7 +70,7 @@ try {
   $mail->setFrom($authUsername, $senderName);
 
   $mail->addAddress($firstRecipientUsername);
-  // $mail->addAddress($secondRecipientUsername);
+  $mail->addAddress($secondRecipientUsername);
   // $mail->addAddress($thirdRecipientUsername);
 
   // Content
