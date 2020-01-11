@@ -59,7 +59,8 @@ $senderName = 'jeremy';
 $mailsubject = $siteName;
 
 try {
-  $mail->SMTPDebug = 3;
+  // $mail->SMTPDebug = 3;
+  $mail->SMTPDebug = 0;
   $mail->isSMTP();
   $mail->Host = $host;
   $mail->SMTPAuth = true;
