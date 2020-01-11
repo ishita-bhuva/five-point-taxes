@@ -59,15 +59,13 @@ $senderName = 'jeremy';
 $mailsubject = $siteName;
 
 try {
-  $mail->SMTPDebug = 2;
-  // $mail->isSMTP();
-  // $mail->Host = $host;
-  $mail->Host = "smtp.gmail.com";
-  $mail->SMTPAuth   = true;
-  $mail->Username   = $authUsername;
-  $mail->Password   = $authPassword;
-  $mail->SMTPSecure = "ssl";
-  $mail->Port = "465";
+  $mail->SMTPDebug = 3;
+  $mail->isSMTP();
+  $mail->Host = $host;
+  $mail->SMTPAuth = true;
+  $mail->Username = $authUsername;
+  $mail->Password = $authPassword;
+  $mail->SMTPSecure = "tls";
 
   $mail->setFrom($authUsername, $senderName);
 
@@ -78,7 +76,7 @@ try {
   // Content
   $mail->isHTML(true);
   $mail->Subject = $mailsubject;
-  $mail->Body    = $body;
+  $mail->Body = $body;
   $mail->send();
 
   $response = [
